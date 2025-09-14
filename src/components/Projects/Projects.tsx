@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
       image: 'https://ik.imgkit.net/3vlqs5axxjf/external/ik-seo/https://www.cfmedia.vfmleonardo.com/imageRepo/2/0/66/584/691/TGR_Damdama_-_Facade_Day_O/The-Gateway-Resort-Damdama-Lake-Gurgaon-Exterior.jpg?tr=w-656%2Ch-390%2Cfo-auto',
       technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express'],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/ReverseEngineeringDude/GateWayResort.git',
       featured: false
     },
     {
@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
       image: 'https://i.ytimg.com/vi/3ViGM4Sz7n4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBjfYT2LklahoCNux57rl30NiQ5qw',
       technologies: ['Flutter', 'Firebase', 'Call Assist', 'TensorFlow'],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/ReverseEngineeringDude/Blind-assist.git',
       featured: true
     }
   ];

@@ -76,18 +76,18 @@ const Footer: React.FC = () => {
                 <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                   <Mail className="w-5 h-5" />
                   <a href="mailto:hello@nextify.com" className="hover:underline">
-                    hello@nextify.com
+                    TheNextifyTech@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                   <Phone className="w-5 h-5" />
-                  <a href="tel:+15551234567" className="hover:underline">
-                    +1 (555) 123-4567
+                  <a href="tel:+918590319003" className="hover:underline">
+                    +918590319003
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <MapPin className="w-5 h-5" />
-                  <span>123 Innovation Street, San Francisco, CA 94107</span>
+                  <span>Seethi Sahib Memorial Polytechnic College, Tirur , Malappuram</span>
                 </div>
               </div>
             </div>

@@ -187,7 +187,7 @@ const Contact: React.FC = () => {
                           onChange={handleInputChange}
                           required
                           className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/10 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-                          placeholder="John Doe"
+                          placeholder="Praveen MT"
                         />
                       </div>
                       <div>
@@ -201,7 +201,7 @@ const Contact: React.FC = () => {
                           onChange={handleInputChange}
                           required
                           className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/10 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-                          placeholder="john@example.com"
+                          placeholder="rea@gmail.com"
                         />
                       </div>
                     </div>
@@ -231,7 +231,7 @@ const Contact: React.FC = () => {
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/10 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-                          placeholder="+1 (555) 123-4567"
+                          placeholder="+91 12345 67890"
                         />
                       </div>
                     </div>
