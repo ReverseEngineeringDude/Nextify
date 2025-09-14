@@ -24,7 +24,7 @@ const Team: React.FC = () => {
       social: {
         github: 'https://github.com/ReverseEngineeringDude',
         linkedin: 'https://www.linkedin.com/in/redbytesec',
-        twitter: 'https://github.com/ReverseEngineeringDude',
+        twitter: 'https://x.com/RedByteSec',
         instagram: 'https://instagram.com/red_byte.sec',
       },
     },
@@ -37,7 +37,7 @@ const Team: React.FC = () => {
       social: {
         linkedin: '#',
         twitter: '#',
-        instagram: '#',
+        instagram: 'https://www.instagram.com/krshna_pria',
       },
     },
     {
@@ -49,7 +49,7 @@ const Team: React.FC = () => {
       social: {
         github: '#',
         linkedin: '#',
-        instagram: '#',
+        instagram: 'https://www.instagram.com/prarthanaa_a___',
       },
     },
     {
@@ -57,11 +57,11 @@ const Team: React.FC = () => {
       role: 'Financial Strategist',
       bio: 'Driving growth through data-driven financial strategies.',
       image:
-        'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400',
+        '/team/abhinav.jpeg', // Local image in public/team/
       social: {
         linkedin: '#',
         twitter: '#',
-        instagram: '#',
+        instagram: 'https://www.instagram.com/ab.hinv',
       },
     },
     {
@@ -73,7 +73,7 @@ const Team: React.FC = () => {
       social: {
         github: '#',
         linkedin: '#',
-        instagram: '#',
+        instagram: 'https://www.instagram.com/mrudhhll',
       },
     },
   ];
