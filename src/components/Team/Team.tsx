@@ -69,7 +69,7 @@ const Team: React.FC = () => {
       role: 'Marketing and Finance',
       bio: 'Driving growth through data-driven marketing strategies.',
       image:
-        'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400',
+        '/team/mruduldev.jpeg', // Local image in public/team/
       social: {
         github: '#',
         linkedin: '#',
@@ -93,7 +93,8 @@ const Team: React.FC = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-center items-start">
+
           {teamMembers.map((member, index) => (
             <div key={index} className="card">
               {/* Profile Pic */}

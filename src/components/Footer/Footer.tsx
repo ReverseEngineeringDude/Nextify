@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/NextifyTech', label: 'GitHub' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Twitter, href: 'https://x.com/nextify_s3', label: 'Twitter' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://instagram.com/next.ify', label: 'Instagram' },
   ];
