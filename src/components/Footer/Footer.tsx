@@ -195,15 +195,6 @@ const Footer: React.FC = () => {
                   </a>
                 ))}
               </div>
-
-              {/* Back to Top
-              <button
-                onClick={scrollToTop}
-                className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 flex items-center justify-center text-white hover:scale-110 hover:shadow-lg hover:shadow-cyan-400/25 transition-all duration-300 group"
-                aria-label="Back to top"
-              >
-                <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" />
-              </button> */}
             </div>
           </div>
 
