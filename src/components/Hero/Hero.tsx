@@ -43,12 +43,13 @@ const Hero: React.FC = () => {
         <div className="max-w-5xl mx-auto">
 
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 glass-card px-6 py-3 mb-8 animate-pulse-glow">
+          <div className="inline-flex items-center space-x-2 glass-card px-6 py-3 mb-8 animate-pulse-glow invisible">
             <Sparkles className="w-4 h-4 text-cyan-400" />
             <span className="text-sm font-medium text-cyan-400">
               Next-Gen Digital Solutions
             </span>
           </div>
+
 
           {/* Main Title */}
           <h1

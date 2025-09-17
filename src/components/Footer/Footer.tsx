@@ -197,16 +197,6 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Powered By Section */}
-          <div className="text-center mt-8 pt-6 border-t border-white/5">
-            <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 animate-pulse-glow">
-              <Zap className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-gray-400">
-                Powered by cutting-edge technology and creative innovation
-              </span>
-            </div>
-          </div>
         </div>
       </div>
 
