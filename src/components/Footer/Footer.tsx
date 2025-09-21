@@ -10,7 +10,8 @@ import {
   Linkedin,
   Instagram,
   ArrowUp,
-  Heart
+  Heart,
+  Facebook
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -35,7 +36,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/NextifyTech', label: 'GitHub' },
     { icon: Twitter, href: 'https://x.com/nextify_s3', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Facebook, href: 'https://facebook.com/share/1FYScvAStm', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/next.ify', label: 'Instagram' },
   ];
 
