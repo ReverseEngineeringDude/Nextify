@@ -11,37 +11,56 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.5 });
 
-    tl.fromTo(titleRef.current,
+    tl.fromTo(
+      titleRef.current,
       { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }
     )
-      .fromTo(subtitleRef.current,
+      .fromTo(
+        subtitleRef.current,
         { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
-        "-=0.8"
+        { y: 0, opacity: 1, duration: 1, ease: 'power3.out' },
+        '-=0.8'
       )
-      .fromTo(buttonsRef.current?.children,
+      .fromTo(
+        buttonsRef.current?.children,
         { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.2 },
-        "-=0.6"
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', stagger: 0.2 },
+        '-=0.6'
       );
 
-    // Floating animation for decorative elements
-    gsap.to(".floating-element", {
+    gsap.to('.floating-element', {
       y: -20,
       duration: 3,
       repeat: -1,
       yoyo: true,
-      ease: "power2.inOut",
-      stagger: 0.5
+      ease: 'power2.inOut',
+      stagger: 0.5,
     });
   }, []);
 
+  // Button click handlers
+  const handleStartProject = () => {
+    const phoneNumber = '918590319003'; // Include country code, e.g., 91XXXXXXXXXX
+    const message = encodeURIComponent(
+      'Hi! I want to start a project with your team.'
+    );
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
+  const handleWatchDemo = () => {
+    const demoUrl = 'https://youtube.com/@thenextifytech?si=dKeSDNmY83dlGt4n'; // replace with your demo link
+    window.open(demoUrl, '_blank');
+  };
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section
+      id="home"
+      ref={heroRef}
+      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+    >
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
-
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 glass-card px-6 py-3 mb-8 animate-pulse-glow invisible">
             <Sparkles className="w-4 h-4 text-cyan-400" />
@@ -50,18 +69,13 @@ const Hero: React.FC = () => {
             </span>
           </div>
 
-
           {/* Main Title */}
           <h1
             ref={titleRef}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight font-space-grotesk"
           >
-            <span className="gradient-text block">
-              Digital Dreams
-            </span>
-            <span className="text-white block">
-              Made Reality
-            </span>
+            <span className="gradient-text block">Digital Dreams</span>
+            <span className="text-white block">Made Reality</span>
           </h1>
 
           {/* Subtitle */}
@@ -74,13 +88,22 @@ const Hero: React.FC = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div ref={buttonsRef} className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="btn-primary flex items-center space-x-2 hover-tilt group text-lg px-8 py-4">
+          <div
+            ref={buttonsRef}
+            className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          >
+            <button
+              onClick={handleStartProject}
+              className="btn-primary flex items-center space-x-2 hover-tilt group text-lg px-8 py-4"
+            >
               <span>Start Your Project</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
 
-            <button className="btn-secondary flex items-center space-x-2 hover-tilt group text-lg px-8 py-4">
+            <button
+              onClick={handleWatchDemo}
+              className="btn-secondary flex items-center space-x-2 hover-tilt group text-lg px-8 py-4"
+            >
               <Play className="w-5 h-5" />
               <span>Watch Demo</span>
             </button>
@@ -98,9 +121,7 @@ const Hero: React.FC = () => {
                 <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-400 text-sm">
-                  {stat.label}
-                </div>
+                <div className="text-gray-400 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -110,9 +131,18 @@ const Hero: React.FC = () => {
       {/* Decorative floating elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="floating-element absolute top-20 left-10 w-20 h-20 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 opacity-20 blur-xl"></div>
-        <div className="floating-element absolute top-40 right-20 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 opacity-20 blur-xl" style={{ animationDelay: '1s' }}></div>
-        <div className="floating-element absolute bottom-40 left-20 w-16 h-16 rounded-full bg-gradient-to-r from-indigo-400 to-purple-400 opacity-20 blur-xl" style={{ animationDelay: '2s' }}></div>
-        <div className="floating-element absolute bottom-20 right-10 w-24 h-24 rounded-full bg-gradient-to-r from-pink-400 to-red-400 opacity-20 blur-xl" style={{ animationDelay: '0.5s' }}></div>
+        <div
+          className="floating-element absolute top-40 right-20 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 opacity-20 blur-xl"
+          style={{ animationDelay: '1s' }}
+        ></div>
+        <div
+          className="floating-element absolute bottom-40 left-20 w-16 h-16 rounded-full bg-gradient-to-r from-indigo-400 to-purple-400 opacity-20 blur-xl"
+          style={{ animationDelay: '2s' }}
+        ></div>
+        <div
+          className="floating-element absolute bottom-20 right-10 w-24 h-24 rounded-full bg-gradient-to-r from-pink-400 to-red-400 opacity-20 blur-xl"
+          style={{ animationDelay: '0.5s' }}
+        ></div>
       </div>
 
       {/* Scroll indicator */}

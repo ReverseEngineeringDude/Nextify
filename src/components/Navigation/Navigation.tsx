@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,9 +24,19 @@ const Navigation: React.FC = () => {
     { href: '#contact', label: 'Contact' },
   ];
 
+  // Open WhatsApp chat
+  const openWhatsApp = () => {
+    const phoneNumber = '918590319003'; // your number
+    const message = encodeURIComponent('Hi, I want to start a project with Nextify!');
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(url, '_blank');
+  };
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass py-4' : 'py-6'
-      }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass py-4' : 'py-6'
+        }`}
+    >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -43,8 +53,6 @@ const Navigation: React.FC = () => {
             </span>
           </Link>
 
-
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link, index) => (
@@ -57,7 +65,7 @@ const Navigation: React.FC = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-cyan-400 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
-            <button className="btn-primary hover-glow">
+            <button onClick={openWhatsApp} className="btn-primary hover-glow">
               Get Started
             </button>
           </div>
@@ -96,7 +104,7 @@ const Navigation: React.FC = () => {
                 {link.label}
               </a>
             ))}
-            <button className="btn-primary w-full mt-4">
+            <button onClick={openWhatsApp} className="btn-primary w-full mt-4">
               Get Started
             </button>
           </div>
